@@ -2,16 +2,16 @@
 using namespace std;
 int duplicate_number(int *arr, int n){
     int hare = arr[0];
-    int tortoies = arr[0];
+    int tortoise = arr[0];
     do{
           hare = arr[hare];
-          tortoies= arr[arr[tortoies]];
+          tortoise= arr[arr[tortoise]];
          }
-    while(hare!=tortoies);
+    while(hare!=tortoise);
        hare=arr[0];
-     while(hare!=tortoies){
+     while(hare!=tortoise){
        hare=arr[hare];
-       tortoies=arr[tortoies]; 
+       tortoise=arr[tortoise]; 
      }
 return hare;
 };
